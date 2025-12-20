@@ -1,0 +1,28 @@
+   Compiling unicode-ident v1.0.22
+   Compiling proc-macro2 v1.0.103
+   Compiling quote v1.0.42
+   Compiling libm v0.2.15
+   Compiling autocfg v1.5.0
+   Compiling wasm-bindgen-shared v0.2.106
+   Compiling cfg-if v1.0.4
+   Compiling rustversion v1.0.22
+   Compiling bumpalo v3.19.1
+   Compiling version_check v0.9.5
+   Compiling crc32fast v1.5.0
+   Compiling once_cell v1.21.3
+   Compiling simd-adler32 v0.3.8
+   Compiling adler2 v2.0.1
+   Compiling byteorder v1.5.0
+   Compiling rand_core v0.6.4
+   Compiling miniz_oxide v0.8.9
+   Compiling zerocopy v0.8.31
+   Compiling siphasher v1.0.1
+   Compiling syn v1.0.109
+   Compiling fdeflate v0.3.7
+   Compiling rand v0.8.5
+   Compiling bitflags v1.3.2
+   Compiling heapless v0.8.0
+error: failed to remove C:\Projects\EIDOS\rust\target\debug\build\proc-macro2-42a52ce14257d1f4\build_script_build-42a52ce14257d1f4.build_script_build.430b0d076a6fd928-cgu.0.rcgu.o: The process cannot access the file because it is being used by another process. (os error 32)
+
+error: could not compile `proc-macro2` (build script) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

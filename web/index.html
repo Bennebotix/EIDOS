@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EIDOS</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="brand">
+          <h1>EIDOS</h1>
+          <p>Rust WASM</p>
+        </div>
+        
+        <div class="controls">
+          <div class="control-group">
+            <label>Shape Count</label>
+            <div class="slider-container">
+              <input type="range" id="shapeCount" min="100" max="10000" value="500" step="100">
+              <span id="shapeCountVal">500</span>
+            </div>
+          </div>
+          
+          <div class="control-group">
+            <label>Detail Level</label>
+            <select id="detailLevel">
+              <option value="standard">Standard</option>
+              <option value="high">High Fidelity (Slower)</option>
+              <option value="super">Super High Fidelity (Very Slow)</option>
+              <option value="hyper">Hyper Fidelity (Extremely Slow)</option>
+            </select>
+          </div>
+
+          <button id="processBtn" class="primary-btn" disabled>
+            <span class="btn-text">Compile Image</span>
+            <div class="btn-glow"></div>
+          </button>
+        </div>
+
+      </aside>
+
+      <main class="main-content">
+        <div class="workspace-grid">
+          <div class="panel upload-panel">
+            <div class="panel-header">
+              <h2>Input</h2>
+              <span class="badge">Drag & Drop</span>
+            </div>
+            <div id="dropZone" class="drop-zone">
+              <div class="drop-content">
+                <p class="upload-icon">⏏</p>
+                <p>Drop image or click to browse</p>
+              </div>
+              <input type="file" id="fileInput" accept="image/*" hidden />
+              <img id="preview" class="hidden" />
+            </div>
+          </div>
+
+          <div class="panel log-panel">
+             <div class="panel-header">
+              <h2>System Logs</h2>
+              <button id="clearLogs" class="icon-btn">×</button>
+            </div>
+            <div id="logConsole" class="console-output">
+              <div class="log-line system">EIDOS System Initialized...</div>
+              <div class="log-line system">Waiting for image...</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel output-panel">
+           <div class="panel-header">
+              <h2>Desmos State Output (JS to execute in the console)</h2>
+              <button id="copyBtn" class="secondary-btn">Copy to Clipboard</button>
+            </div>
+            <textarea id="output" readonly placeholder="// Output will appear here..."></textarea>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
