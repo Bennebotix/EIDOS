@@ -5,7 +5,7 @@ EIDOS takes any image and reconstructs it using hundreds or thousands of overlap
 The heavy lifting is done in Rust (compiled to WASM) so it's fast enough to run in your browser.
 
 [Demo](https://bennebotix.github.io/EIDOS/dist/index.html)
-[Example](https://desmos.com/calculator/)
+[Example](https://www.desmos.com/calculator/d0obig4nob)
 
 ## 🚀 Features
 
